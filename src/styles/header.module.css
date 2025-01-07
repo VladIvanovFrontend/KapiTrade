@@ -1,0 +1,25 @@
+.header__container {
+    width: 100%;
+    height: 100px;
+    background-color: #959595;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 100px;
+    box-sizing: border-box;
+}
+
+.header__logoWrapper {
+    margin-left: 10px;
+}
+
+.header__logo {
+    min-width: 80px;
+    height: 80px;
+}
+
+.header__buttons {
+    display: flex;
+    gap: 20px;
+}
