@@ -1,0 +1,41 @@
+.currencyBlock {
+    background-color: #ffffff;
+    border: 1px solid #959595;
+    width: 280px;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 10px;
+}
+
+.currency {
+    margin-bottom: 10px;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.currency:hover {
+    transform: scale(1.02);
+    color: #575757;
+}
+
+.offerButton {
+    background-color: rgb(255, 255, 255);
+    width: 180px;
+    height: 30px;
+    font-size: 15px;
+    border: 1px solid #959595;
+}
+
+.offerButton:hover {
+    transform: scale(1.02);
+}
+
+span {
+    width: 100px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: right;
+}

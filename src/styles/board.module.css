@@ -1,0 +1,109 @@
+.popPif__titleWrapper {
+    width: 1200px;
+    height: 42px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.popPif__title {
+    font-family: "SB Sans Display", sans-serif;
+    font-size: 32px;
+    letter-spacing: -0.3px;
+    font-weight: 500;
+    line-height: 42px;
+    text-decoration: none solid rgb(0, 0, 0);
+    word-spacing: 0;
+    color: #000000;
+}
+
+.popPif__container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+}
+
+.popPif__buyButton {
+    font-family: "SB Sans Interface", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 26px;
+    text-decoration: none solid rgb(44, 49, 54);
+    text-align: center;
+    color: #2c3136;
+    width: 216px;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 50px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.popPif__buyButton:hover {
+    background-color: #eaeaea;
+}
+
+.popPif__Type {
+    font-family: "SB Sans Interface", sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    text-decoration: none solid rgb(135, 139, 144);
+    color: #878B90;
+    width: 309px;
+    height: 20px;
+}
+
+.popPif__Name {
+    font-family: "SB Sans Interface", sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 32px;
+    text-decoration: none solid rgb(44, 49, 54);
+    color: #2c3136;
+    width: 309px;
+    height: 32px;
+}
+
+.popPif__imgWrapper {
+    width: 314px;
+    height: 180px;
+    background-color: #ecf8f8;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+}
+
+.popPif__img {
+    height: 180px;
+    width: 274px;
+}
+
+.popPif__Interpretation {
+    font-family: "SB Sans Interface", sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    text-decoration: none solid rgb(44, 49, 54);
+    color: #2c3136;
+    width: 314px;
+    height: 60px;
+}
+
+.popPif__riskLevel {
+    font-family: "SB Sans Interface", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none solid rgb(135, 139, 144);
+    width: 309px;
+    height: 20px;
+    color: #878B90;
+    margin-top: 10px;
+}
+
+.popPif__Wrapper {
+    width: 330px;
+    height: 445px;
+    padding: 19px 0 13px 17px;
+    border: 1px solid #ededed;
+    margin-bottom: 50px;
+    border-radius: 5px;
+}

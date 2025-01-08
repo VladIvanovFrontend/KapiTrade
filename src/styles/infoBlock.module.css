@@ -1,0 +1,85 @@
+.title__wrapper {
+    background-color: #F3F3F3;
+    height: 450px;
+    width: 1170px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title__container {
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    width: 612px;
+}
+
+.title {
+    font-family: SB Sans Display, sans-serif;
+    font-style: normal;
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    text-decoration: none solid rgb(0, 0, 0);
+    word-spacing: 0;
+    width: 516px;
+    height: 116px;
+    min-height: 12px;
+    line-height: 50px;
+    margin: 40px 0 50px 32px;
+}
+
+.title__text {
+    font-family: SB Sans Text, sans-serif;
+    font-size: 16px;
+    letter-spacing: -0.3px;
+    line-height: 24px;
+    text-decoration: none solid rgb(38, 38, 38);
+    height: 48px;
+    width: 316px;
+    min-height: 12px;
+    margin: 0 0 12px 32px;
+    color: #262626;
+}
+
+.title__list {
+    font-size: 19px;
+    letter-spacing: -0.3px;
+    line-height: 28px;
+    text-decoration: none solid rgb(38, 38, 38);
+    width: 450px;
+    color: #262626;
+    font-family: SB Sans Text, Arial, sans-serif;
+}
+
+.title__buttonBuy {
+    font-family: SBSansText, OpenSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    line-height: 20px;
+    text-decoration: none solid rgb(255, 255, 255);
+    background-color: #148f2b;
+    color: rgb(255, 255, 255);
+    height: 52px;
+    width: 185px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    padding: 0 32px 0 32px;
+    transition: background 0.2s linear, border-color 0.2s linear;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 80px;
+    margin-left: 52px;
+}
+
+.title__buttonBuy:hover {
+    background-color: #007500;
+}
+
+.title__img {
+    width: 600px;
+    height: 450px;
+    border-radius: 20px;
+}
