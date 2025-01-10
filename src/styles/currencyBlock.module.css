@@ -39,3 +39,13 @@ span {
     display: flex;
     justify-content: right;
 }
+
+.lastUpdated {
+    color: #575757;
+}
+
+@media (max-width: 768px) {
+    .currencyBlock {
+        display: none;
+    }
+}

@@ -19,7 +19,6 @@ const CurrencyBlock = () => {
 
                 const data = await response.json();
 
-                // Преобразуем timestamp в читаемую дату
                 const lastUpdated = new Date(data.timestamp * 1000).toLocaleString('ru-RU', {
                     day: '2-digit',
                     month: '2-digit',
@@ -68,7 +67,7 @@ const CurrencyBlock = () => {
             </div>
             <button
                 className={`${styles.offerButton}`}
-                onClick={() => alert('Открыть предложение')}
+                onClick={() => window.open('https://bezbrokera.ru/', '_blank')}
             >
                 Открыть предложение
             </button>

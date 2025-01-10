@@ -2,6 +2,7 @@
     width: 1200px;
     height: 42px;
     padding-left: 15px;
+    margin-bottom: 300px;
 }
 
 .pifWork__title {
@@ -48,7 +49,7 @@
 
 .pifWork__Interpretation {
     font-family: "SBSansText", sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     letter-spacing: -0.3px;
     line-height: 24px;
     width: 320px;
@@ -61,4 +62,83 @@
     display: flex;
     justify-content: center;
     gap: 15px;
+    position: relative;
+}
+
+.dotContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #d3d3d3;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+    background-color: #a9a9a9;
+}
+
+.activeDot {
+    background-color: #000000;
+}
+
+/* Обычная версия для десктопа */
+@media (min-width: 769px) {
+    .carouselContainer {
+        display: none;
+    }
+
+    .desktopContainer {
+        display: flex;
+    }
+}
+
+/* Карусель для мобильных устройств */
+@media (max-width: 768px) {
+    .pifPanelsWrapper {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-direction: row;
+        overflow: hidden;
+        width: 360px;
+    }
+
+    .pifWork__titleWrapper {
+        width: 370px;
+        height: 42px;
+        padding-left: 15px;
+        margin-bottom: 300px;
+    }
+
+    /* Панели для мобильной версии */
+    .pifWork__container {
+        width: 360px;
+        margin-bottom: 10px;
+        flex-shrink: 0;
+    }
+
+    /* Контейнер для точек */
+    .dotContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .desktopContainer {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .dotContainer {
+        display: none;
+    }
 }

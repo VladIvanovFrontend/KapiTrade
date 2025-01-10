@@ -12,9 +12,7 @@ const App = () => {
         // Лого заменить
         logo: 'favicon.ico',
         buttons: [
-            {text: 'Сейчас торгуются', onClick: () => alert('Сейчас торгуются')},
-            {text: 'Регистрация', onClick: () => alert('Регистрация')},
-            {text: 'Вход', onClick: () => alert('Вход')},
+            {text: 'Сейчас торгуются', onClick: () => window.open('https://bezbrokera.ru/', '_blank')},
         ],
     };
 

@@ -40,3 +40,33 @@
     width: 608px;
     height: 170px;
 }
+
+@media (max-width: 768px) {
+    .pif__container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: #F3F3F3;
+        height: 210px;
+        border-radius: 20px;
+        padding: 20px;
+    }
+    .pif__img {
+        display: none;
+    }
+    .pif__wrapper {
+        width: 385px;
+        height: 262px;
+    }
+    .pif__details {
+        font-family: SB Sans Text, sans-serif;
+        font-size: 16px;
+        letter-spacing: -0.3px;
+        line-height: 24px;
+        text-decoration: none solid rgb(0, 0, 0);
+        color: #000000;
+        word-spacing: 0;
+        width: 355px;
+        height: 170px;
+    }
+}
