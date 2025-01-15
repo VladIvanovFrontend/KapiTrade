@@ -1,12 +1,11 @@
 .currencyBlock {
     background-color: #ffffff;
-    border: 1px solid #959595;
-    width: 280px;
-    height: 100%;
+    border-radius: 15px;
+    margin-top: 45px;
+    margin-right: 50px;
+    width: 380px;
     padding: 10px;
     box-sizing: border-box;
-    position: sticky;
-    top: 10px;
 }
 
 .currency {
@@ -14,6 +13,13 @@
     padding: 2px;
     display: flex;
     justify-content: space-between;
+    font-family: SB Sans Display, sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    text-decoration: none solid rgb(0, 0, 0);
+    word-spacing: 0;
 }
 
 .currency:hover {
@@ -47,5 +53,12 @@ span {
 @media (max-width: 768px) {
     .currencyBlock {
         display: none;
+    }
+}
+
+@media only screen and (min-device-pixel-ratio: 2),
+only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .currencyBlock {
+        margin-right: 50px;
     }
 }

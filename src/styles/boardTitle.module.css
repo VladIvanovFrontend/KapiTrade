@@ -1,16 +1,18 @@
 .pif__wrapper {
     width: 1170px;
-    height: 412px;
+    height: 312px;
 }
 
 .pif__container {
     display: flex;
     align-items: center;
+    height: 300px;
+    margin-left: 100px;
 }
 
 .pif__img {
-    width: 503px;
-    height: 412px;
+    width: 403px;
+    height: 300px;
 }
 
 .pif__details {
@@ -50,6 +52,7 @@
         height: 210px;
         border-radius: 20px;
         padding: 20px;
+        margin-left: 0;
     }
     .pif__img {
         display: none;
@@ -68,5 +71,18 @@
         word-spacing: 0;
         width: 355px;
         height: 170px;
+    }
+}
+
+@media (max-width: 2000px) {
+    .pif__wrapper {
+        transform: scale(0.9) !important;
+    }
+}
+
+@media only screen and (min-device-pixel-ratio: 2),
+only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .pif__wrapper {
+        transform: scale(0.9) !important;
     }
 }

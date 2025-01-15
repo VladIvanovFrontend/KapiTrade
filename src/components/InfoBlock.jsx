@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../styles/infoBlock.module.css';
+import CurrencyBlock from "./CurrencyBlock";
 
 const InfoBlock = ({title, description, button}) => {
     return (
@@ -21,7 +22,7 @@ const InfoBlock = ({title, description, button}) => {
                 </button>
             </div>
             <div>
-                <img src="/img__title.png" alt={'title__img'} className={styles.title__img}/>
+                <CurrencyBlock/>
             </div>
         </section>
     );

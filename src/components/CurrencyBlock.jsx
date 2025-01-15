@@ -65,12 +65,12 @@ const CurrencyBlock = () => {
                     </div>
                 ))}
             </div>
-            <button
-                className={`${styles.offerButton}`}
-                onClick={() => window.open('https://bezbrokera.ru/', '_blank')}
-            >
-                Открыть предложение
-            </button>
+            {/*<button*/}
+            {/*    className={`${styles.offerButton}`}*/}
+            {/*    onClick={() => window.open('https://bezbrokera.ru/', '_blank')}*/}
+            {/*>*/}
+            {/*    Открыть предложение*/}
+            {/*</button>*/}
         </section>
     );
 };

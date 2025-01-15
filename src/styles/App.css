@@ -1,7 +1,5 @@
 main {
     display: flex;
-    padding: 10px;
-    gap: 10px;
     justify-content: space-around;
 }
 
@@ -18,5 +16,9 @@ header {
 @media (max-width: 768px) {
     section {
         width: 400px;
+    }
+    aside {
+        background-color: rgba(11, 76, 23, 0);
+        width: 0;
     }
 }
