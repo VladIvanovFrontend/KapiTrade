@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../styles/currencyBlock.module.css';
 
-const CurrencyBlock = ({isHeader}) => {
+const CurrencyBlock = ({ isHeader }) => {
     const [currencies, setCurrencies] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
         const fetchCurrencies = async () => {
@@ -25,10 +26,10 @@ const CurrencyBlock = ({isHeader}) => {
                 });
 
                 const formattedCurrencies = [
-                    { ticker: 'EUR/RUB F', value: (data.rates.RUB / data.rates.EUR).toFixed(2), lastUpdated },
-                    { ticker: 'USD/RUB F', value: (data.rates.RUB / data.rates.USD).toFixed(2), lastUpdated },
-                    { ticker: 'CNY/RUB F', value: (data.rates.RUB / data.rates.CNY).toFixed(2), lastUpdated },
-                    { ticker: 'RUB/GLD F', value: (data.rates.RUB * 0.018).toFixed(2), lastUpdated },
+                    { ticker: 'EUR/RUB', value: (data.rates.RUB / data.rates.EUR).toFixed(2), lastUpdated },
+                    { ticker: 'USD/RUB', value: (data.rates.RUB / data.rates.USD).toFixed(2), lastUpdated },
+                    { ticker: 'CNY/RUB', value: (data.rates.RUB / data.rates.CNY).toFixed(2), lastUpdated },
+                    { ticker: 'RUB/GLD', value: (data.rates.RUB * 0.018).toFixed(2), lastUpdated },
                 ];
 
                 setCurrencies(formattedCurrencies);
@@ -41,6 +42,12 @@ const CurrencyBlock = ({isHeader}) => {
         };
 
         fetchCurrencies();
+
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     if (loading) {
@@ -51,16 +58,19 @@ const CurrencyBlock = ({isHeader}) => {
         return <div className={styles.currencyBlock}>Ошибка: {error}</div>;
     }
 
+    const animatedCurrencies = isMobile ? [...currencies, ...currencies] : currencies;
+
     return (
         <section className={styles.currencyBlock}>
-            <div className={styles.currencies}>
-                {currencies.map((currency, index) => (
-                    <div key={index} className={`${styles.currency} ${isHeader ? styles.headerCurrency : ""}`}>
+            <div className={`${styles.currencies} ${isMobile ? styles.mobileCurrencies : ''}`}>
+                {animatedCurrencies.map((currency, index) => (
+                    <div
+                        key={`currency-${index}`}
+                        className={`${styles.currency} ${isHeader ? styles.headerCurrency : ''}`}
+                    >
                         <span>{currency.ticker}</span>
-                        <span className={styles.lastUpdated}>
-                            {currency.lastUpdated}
-                        </span>
-                        <span>{currency.value}</span>
+                        <span className={styles.lastUpdated}>{currency.lastUpdated}</span>
+                        <span className={styles.lastCurrency}>{currency.value}</span>
                     </div>
                 ))}
             </div>
