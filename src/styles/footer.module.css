@@ -1,0 +1,13 @@
+.footer__wrapper {
+    width: 1200px;
+}
+
+details[open] summary {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .footer__wrapper {
+        width: 300px;
+    }
+}

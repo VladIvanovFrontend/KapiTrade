@@ -8,6 +8,7 @@
     align-items: center;
     height: 300px;
     margin-left: 100px;
+    white-space: pre-line;
 }
 
 .pif__img {
@@ -33,9 +34,9 @@
 
 .pif__details {
     font-family: SB Sans Text, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: -0.3px;
-    line-height: 24px;
+    line-height: 30px;
     text-decoration: none solid rgb(0, 0, 0);
     color: #000000;
     word-spacing: 0;
@@ -49,7 +50,7 @@
         align-items: center;
         flex-direction: column;
         background-color: #F3F3F3;
-        height: 210px;
+        height: 250px;
         border-radius: 20px;
         padding: 20px;
         margin-left: 0;
