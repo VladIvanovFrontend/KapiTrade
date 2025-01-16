@@ -8,14 +8,6 @@ import Board from "./components/Board";
 import Panel from "./components/Panel";
 
 const App = () => {
-    const headerProps = {
-        // Лого заменить
-        logo: 'favicon.ico',
-        buttons: [
-            {text: 'Сейчас торгуются', onClick: () => window.open('https://bezbrokera.ru/', '_blank')},
-        ],
-    };
-
     const infoBlockProps = {
         title: 'КапиТрейд — прямой доступ к торговле внебиржевым активам.',
         description: [
@@ -23,7 +15,7 @@ const App = () => {
             'Без комиссий за сделки.',
             'В удобном сервисе.',
         ],
-        button: {text: 'Открыть предложения'},
+        button: {text: 'Открыть предложения', onClick: () => window.open('https://bezbrokera.ru/', '_blank')},
     };
 
     const boardTitleProps = {
@@ -91,11 +83,10 @@ const App = () => {
         <div>
             <header>
             </header>
-            <Header {...headerProps} />
+            <Header />
             <main>
                 <section>
                     <InfoBlock {...infoBlockProps} />
-                    {/*<CurrencyBlock/>*/}
                     <BoardTitle {...boardTitleProps}/>
                     <Board {...boardProps}/>
                     <Panel {...panelProps}/>

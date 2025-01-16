@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../styles/currencyBlock.module.css';
 
-const CurrencyBlock = () => {
+const CurrencyBlock = ({isHeader}) => {
     const [currencies, setCurrencies] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -22,14 +22,13 @@ const CurrencyBlock = () => {
                 const lastUpdated = new Date(data.timestamp * 1000).toLocaleString('ru-RU', {
                     day: '2-digit',
                     month: '2-digit',
-                    year: 'numeric',
                 });
 
                 const formattedCurrencies = [
                     { ticker: 'EUR/RUB F', value: (data.rates.RUB / data.rates.EUR).toFixed(2), lastUpdated },
                     { ticker: 'USD/RUB F', value: (data.rates.RUB / data.rates.USD).toFixed(2), lastUpdated },
                     { ticker: 'CNY/RUB F', value: (data.rates.RUB / data.rates.CNY).toFixed(2), lastUpdated },
-                    { ticker: 'GLD/RUB F', value: (data.rates.RUB * 0.018).toFixed(2), lastUpdated },
+                    { ticker: 'RUB/GLD F', value: (data.rates.RUB * 0.018).toFixed(2), lastUpdated },
                 ];
 
                 setCurrencies(formattedCurrencies);
@@ -56,7 +55,7 @@ const CurrencyBlock = () => {
         <section className={styles.currencyBlock}>
             <div className={styles.currencies}>
                 {currencies.map((currency, index) => (
-                    <div key={index} className={styles.currency}>
+                    <div key={index} className={`${styles.currency} ${isHeader ? styles.headerCurrency : ""}`}>
                         <span>{currency.ticker}</span>
                         <span className={styles.lastUpdated}>
                             {currency.lastUpdated}
@@ -65,12 +64,6 @@ const CurrencyBlock = () => {
                     </div>
                 ))}
             </div>
-            {/*<button*/}
-            {/*    className={`${styles.offerButton}`}*/}
-            {/*    onClick={() => window.open('https://bezbrokera.ru/', '_blank')}*/}
-            {/*>*/}
-            {/*    Открыть предложение*/}
-            {/*</button>*/}
         </section>
     );
 };

@@ -34,6 +34,12 @@
     font-size: 15px;
 }
 
-.header__button:hover {
-    transform: scale(1.02);
+.header__wrapper {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .header__wrapper {
+        display: flex;
+    }
 }

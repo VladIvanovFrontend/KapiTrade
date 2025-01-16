@@ -13,7 +13,7 @@
 .title__container {
     display: flex;
     flex-direction: column;
-    height: 400px;
+    height: 350px;
     width: 700px;
 }
 
@@ -29,7 +29,7 @@
     height: 116px;
     min-height: 12px;
     line-height: 50px;
-    margin: 40px 0 10px 32px;
+    margin: 20px 0 10px 32px;
 }
 
 .title__text {
@@ -96,6 +96,10 @@
         display: flex;
         justify-content: space-between;
         margin-left: 0;
+    }
+
+    .currency {
+        display: none;
     }
 
     .title__container {
