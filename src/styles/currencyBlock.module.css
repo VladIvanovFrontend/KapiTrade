@@ -56,13 +56,8 @@ span {
 }
 
 @media (max-width: 768px) {
-    .currencyBlock {
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-    }
-
     span {
+        height: 20px;
         width: auto;
         box-sizing: border-box;
         display: flex;
@@ -71,34 +66,49 @@ span {
         margin-right: 10px;
     }
 
-    .currencies {
-        display: flex;
-        animation: infiniteMarquee 20s linear infinite;
-        white-space: nowrap;
+    .currencyBlock {
+        width: 100%;
+        animation: marquee 15s linear infinite;
+        overflow: hidden;
     }
 
-    .headerCurrency {
-        width: 200px;
+    .currencies {
+        display: flex;
+        height: 40px;
+        border-right: 1px solid black;
     }
 
     .currency {
-        flex: 0 0 auto;
-        margin-right: 10px;
+        display: none;
     }
 
-    .lastCurrency:after {
-        content: '';
-        height: 20px;
-        border: 1px solid black;
-        margin-left: 10px;
+    .headerCurrency {
+        margin-bottom: 10px;
+        padding: 2px;
+        display: flex;
+        justify-content: space-between;
+        font-family: SB Sans Display, sans-serif;
+        font-style: normal;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: -0.3px;
+        text-decoration: none solid rgb(0, 0, 0);
+        word-spacing: 0;
+        border: 1px solid #838383;
     }
 }
 
-@keyframes infiniteMarquee {
+@media only screen and (min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .currencyBlock {
+        margin-right: 50px;
+    }
+}
+
+@keyframes marquee {
     0% {
-        transform: translateX(0);
+        transform: translateX(0); /* Начинаем с левого края */
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-50%); /* Двигаем на половину ширины */
     }
 }
