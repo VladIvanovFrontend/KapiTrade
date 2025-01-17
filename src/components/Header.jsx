@@ -8,7 +8,6 @@ const Header = () => {
                  id={'marquee'}
             >
                 <CurrencyBlock
-                    isHeader={true}
                 />
             </div>
         </header>);

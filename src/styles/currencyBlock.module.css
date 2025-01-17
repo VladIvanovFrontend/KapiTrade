@@ -1,16 +1,32 @@
 .currencyBlock {
-    background-color: #ffffff;
     border-radius: 15px;
     margin-top: 20px;
     margin-right: 50px;
-    width: 380px;
-    padding: 10px;
     box-sizing: border-box;
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.currencies {
+    display: flex;
+    animation: infiniteMarquee 20s linear infinite;
+    white-space: nowrap;
+    width: max-content; /* Убирает обрезание элементов */
+}
+
+.lastCurrency:after {
+    content: '';
+    height: 20px;
+    border: 1px solid black;
+    margin-left: 10px;
 }
 
 .currency {
-    margin-bottom: 10px;
-    padding: 2px;
+    flex: 0 0 auto; /* Гарантирует фиксированную ширину элементов */
+    margin-right: 20px; /* Расстояние между элементами */
     display: flex;
     justify-content: space-between;
     font-family: SB Sans Display, sans-serif;
@@ -18,10 +34,10 @@
     font-size: 18px;
     font-weight: 500;
     letter-spacing: -0.3px;
+    word-spacing: 0;
     text-decoration: none solid rgb(0, 0, 0);
     word-spacing: 0;
 }
-
 .currency:hover {
     transform: scale(1.02);
     color: #575757;
@@ -40,10 +56,12 @@
 }
 
 span {
-    width: 100px;
+    width: auto;
     box-sizing: border-box;
     display: flex;
     justify-content: right;
+    white-space: nowrap;
+    margin-right: 10px;
 }
 
 .lastUpdated {
@@ -93,12 +111,17 @@ span {
         margin-left: 10px;
     }
 }
-
 @keyframes infiniteMarquee {
     0% {
         transform: translateX(0);
     }
     100% {
         transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .currencies {
+        animation-duration: 10s; /* Ускоряем для мобильных устройств */
     }
 }

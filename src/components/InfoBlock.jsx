@@ -22,7 +22,6 @@ const InfoBlock = ({title, description, button}) => {
                 </button>
             </div>
             <div className={styles.currency}>
-                <CurrencyBlock/>
             </div>
         </section>
     );
