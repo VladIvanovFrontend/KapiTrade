@@ -111,6 +111,13 @@ span {
         margin-left: 10px;
     }
 }
+
+@media only screen and (min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .currencyBlock {
+        margin-right: 50px;
+    }
+}
+
 @keyframes infiniteMarquee {
     0% {
         transform: translateX(0);
