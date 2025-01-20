@@ -11,3 +11,7 @@ details[open] summary {
         width: 300px;
     }
 }
+
+details[open] summary {
+    display: none;
+}
