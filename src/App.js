@@ -46,6 +46,7 @@ const App = () => {
             },
         ],
     };
+    const apiUrl = 'http://bezbrokera.ru:8080/assets/by-type';
 
     return (
         <div>
@@ -56,8 +57,8 @@ const App = () => {
                 <section>
                     <InfoBlock {...infoBlockProps} />
                     <BoardTitle {...boardTitleProps}/>
-                    <Board />
                     <Panel {...panelProps}/>
+                    <Board title="Доска предложений" apiUrl={apiUrl}/>
                     <hr></hr>
                     <Footer />
                 </section>
