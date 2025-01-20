@@ -37,6 +37,12 @@
     justify-content: space-around;
 }
 
+@media (max-width: 1800px) {
+    .header__button {
+        margin-right: 40%;
+    }
+}
+
 @media (max-width: 768px) {
     .header__wrapper {
         display: flex;

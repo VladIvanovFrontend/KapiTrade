@@ -13,7 +13,7 @@
     display: flex;
     animation: infiniteMarquee 20s linear infinite;
     white-space: nowrap;
-    width: max-content; /* Убирает обрезание элементов */
+    width: max-content;
 }
 
 .lastCurrency:after {
@@ -24,8 +24,8 @@
 }
 
 .currency {
-    flex: 0 0 auto; /* Гарантирует фиксированную ширину элементов */
-    margin-right: 20px; /* Расстояние между элементами */
+    flex: 0 0 auto;
+    margin-right: 20px;
     display: flex;
     justify-content: space-between;
     font-family: SB Sans Display, sans-serif;
@@ -126,8 +126,15 @@ span {
     }
 }
 
+@media (max-width: 1800px) {
+    .currencyBlock {
+        margin-left: 22%;
+        width: 40%;
+    }
+}
+
 @media (max-width: 768px) {
     .currencies {
-        animation-duration: 10s; /* Ускоряем для мобильных устройств */
+        animation-duration: 10s;
     }
 }
