@@ -9,6 +9,9 @@ const Header = () => {
             >
                 <CurrencyBlock
                 />
+                <button className={classes.header__button}>
+                    Вход
+                </button>
             </div>
         </header>);
 };

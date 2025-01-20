@@ -1,12 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import classes from "../styles/board.module.css";
 
-const Board = ({ boards, title }) => {
+const Board = ({ title }) => {
+    const [boards, setBoards] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     const handleCardClick = (index) => {
         setCurrentIndex(index);
     };
+
+    const fetchOffers = async () => {
+        try {
+            const url = `http://bezbrokera.ru:8080/assets/by-type`;
+
+            const response = await fetch(url);
+
+            if (!response.ok) {
+                throw new Error(`Ошибка HTTP: ${response.status} ${response.statusText}`);
+            }
+
+            const data = await response.json();
+
+            if (Array.isArray(data) && data.length > 0) {
+                setBoards(data);
+            } else {
+                setError('Получены некорректные данные');
+            }
+        } catch (err) {
+            console.error('Ошибка при загрузке данных:', err.message);
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        fetchOffers();
+    }, []);
+
+    if (loading) {
+        return <p>Загрузка...</p>;
+    }
+
+    if (error) {
+        return <p>Ошибка: {error}</p>;
+    }
 
     return (
         <section>
@@ -25,7 +65,7 @@ const Board = ({ boards, title }) => {
                         <p className={classes.popPif__Type}>{board.type}</p>
                         <h3 className={classes.popPif__Name}>{board.name}</h3>
                         <div className={classes.popPif__imgWrapper}>
-                            <img src={board.img} alt="popPif__img" className={classes.popPif__img} />
+                            <img src={board.img} alt="popPif__img" className={classes.popPif__img}/>
                         </div>
                         <p className={classes.popPif__Interpretation}>{board.text}</p>
                         <button
@@ -49,7 +89,7 @@ const Board = ({ boards, title }) => {
                     <p className={classes.popPif__Type}>{boards[currentIndex].type}</p>
                     <h3 className={classes.popPif__Name}>{boards[currentIndex].name}</h3>
                     <div className={classes.popPif__imgWrapper}>
-                        <img src={boards[currentIndex].img} alt="popPif__img" className={classes.popPif__img} />
+                        <img src={boards[currentIndex].img} alt="popPif__img" className={classes.popPif__img}/>
                     </div>
                     <p className={classes.popPif__Interpretation}>{boards[currentIndex].text}</p>
                     <button
@@ -76,3 +116,4 @@ const Board = ({ boards, title }) => {
 };
 
 export default Board;
+

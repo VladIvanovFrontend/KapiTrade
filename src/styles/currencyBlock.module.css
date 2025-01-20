@@ -1,13 +1,12 @@
 .currencyBlock {
     border-radius: 15px;
     margin-top: 20px;
-    margin-right: 50px;
     box-sizing: border-box;
     width: 50%;
     overflow: hidden;
     position: relative;
     margin-bottom: 10px;
-    margin-left: 20px;
+    margin-left: 38%;
 }
 
 .currencies {
@@ -36,7 +35,6 @@
     letter-spacing: -0.3px;
     word-spacing: 0;
     text-decoration: none solid rgb(0, 0, 0);
-    word-spacing: 0;
 }
 .currency:hover {
     transform: scale(1.02);
@@ -78,6 +76,7 @@ span {
         width: 100%;
         overflow: hidden;
         position: relative;
+        margin-left: 0;
     }
 
     span {

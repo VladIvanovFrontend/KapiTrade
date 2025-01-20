@@ -1,5 +1,5 @@
 .header__container {
-    width: 100%;
+    width: 100vw;
     height: 50px;
     background-color: #ffffff;
     display: flex;
@@ -20,18 +20,21 @@
     height: 40px;
 }
 
-.header__buttons {
-    display: flex;
-    gap: 20px;
-}
-
 .header__button {
     border: 1px solid gray;
-    background-color: rgb(255, 255, 255);
-    width: 150px;
-    height: 30px;
-    border-radius: 5px;
-    font-size: 15px;
+    background-color: rgb(227, 227, 227);
+    width: 130px;
+    height: 35px;
+    border-radius: 25px;
+    font-size: 17px;
+    margin-top: 9px;
+    font-family: SB Sans Display, sans-serif;
+}
+
+.header__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 @media (max-width: 768px) {
