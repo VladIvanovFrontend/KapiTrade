@@ -2,11 +2,11 @@
     border-radius: 15px;
     margin-top: 20px;
     box-sizing: border-box;
-    width: 50%;
+    width: 52%;
     overflow: hidden;
     position: relative;
     margin-bottom: 10px;
-    margin-left: 38%;
+    margin-left: 23%;
 }
 
 .currencies {
@@ -76,7 +76,6 @@ span {
         width: 100%;
         overflow: hidden;
         position: relative;
-        margin-left: 0;
     }
 
     span {
@@ -92,6 +91,7 @@ span {
         display: flex;
         animation: infiniteMarquee 20s linear infinite;
         white-space: nowrap;
+        animation-duration: 10s;
     }
 
     .headerCurrency {
@@ -128,13 +128,7 @@ span {
 
 @media (max-width: 1800px) {
     .currencyBlock {
-        margin-left: 22%;
-        width: 40%;
-    }
-}
-
-@media (max-width: 768px) {
-    .currencies {
-        animation-duration: 10s;
+        margin-left: 32%;
+        width: 50%;
     }
 }

@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding-right: 130px;
     box-sizing: border-box;
     border: 1px solid gray;
@@ -39,12 +39,18 @@
 
 @media (max-width: 1800px) {
     .header__button {
-        margin-right: 40%;
+        margin-right: 20%;
     }
 }
 
 @media (max-width: 768px) {
     .header__wrapper {
         display: flex;
+        justify-content: center;
+        margin-right: 0;
+        margin-left: 100%
+    }
+    .header__button {
+        margin-right: 44%;
     }
 }

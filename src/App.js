@@ -1,10 +1,9 @@
 import React from 'react';
 import Header from './components/Header';
-import CurrencyBlock from './components/CurrencyBlock';
 import InfoBlock from './components/InfoBlock';
 import './styles/App.css';
 import BoardTitle from "./components/BoardTitle";
-import Board from "./components/Board";
+import BoardOffers from "./components/BoardOffers";
 import Panel from "./components/Panel";
 import Footer from "./components/Footer";
 
@@ -58,7 +57,7 @@ const App = () => {
                     <InfoBlock {...infoBlockProps} />
                     <BoardTitle {...boardTitleProps}/>
                     <Panel {...panelProps}/>
-                    <Board title="Доска предложений" apiUrl={apiUrl}/>
+                    <BoardOffers title="Доска предложений" apiUrl={apiUrl}/>
                     <hr></hr>
                     <Footer />
                 </section>

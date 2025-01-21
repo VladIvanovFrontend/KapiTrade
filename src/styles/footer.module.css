@@ -2,7 +2,7 @@
     width: 1200px;
 }
 
-details[open] summary {
+details[open] .summary {
     display: none;
 }
 
@@ -10,8 +10,4 @@ details[open] summary {
     .footer__wrapper {
         width: 300px;
     }
-}
-
-details[open] summary {
-    display: none;
 }
