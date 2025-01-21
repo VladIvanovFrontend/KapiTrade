@@ -3,7 +3,7 @@ const footerText = {
     contactsTIN: 'ИНН 236104351062',
     contactsNumb: '+ 7(961)535-25-75',
     contactsEmail: 'kovalev_v.v@capitrade.ru',
-    contactPerson: 'ПНПД Ковалёв В.В.',
+    contactPerson: 'ПНПД Ковалёв В.В. от 12.08.2020',
     privacyPolicyLink: 'http://bezbrokera.ru/privacy',
     termsOfServiceLink: 'http://bezbrokera.ru/terms-of-service',
     disclaimer: `Инвестиции сопряжены с риском.

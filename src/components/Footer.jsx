@@ -28,7 +28,7 @@ const Footer = () => {
     </ul>
     <p>{footerText.disclaimer}</p>
     <details>
-        <summary>Читать далее...</summary>
+        <summary className={styles.summary}>Читать далее...</summary>
         <p>{footerText.readMore}</p>
     </details>
 </footer>
