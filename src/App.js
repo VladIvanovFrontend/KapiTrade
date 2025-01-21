@@ -15,7 +15,7 @@ const App = () => {
             'Без комиссий за сделки.',
             'В удобном сервисе.',
         ],
-        button: {text: 'Открыть предложения', onClick: () => window.open('https://bezbrokera.ru/', '_blank')},
+        button: {text: 'Открыть предложения', onClick: () => window.open('http://bezbrokera.ru/', '_blank')},
     };
 
     const boardTitleProps = {

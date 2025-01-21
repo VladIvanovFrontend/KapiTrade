@@ -16,7 +16,7 @@ const InfoBlock = ({title, description, button}) => {
                 </ul>
                 <button
                     className={`${styles.title__buttonBuy} ${button.className || ''}`}
-                    onClick={() => window.open('https://bezbrokera.ru/', '_blank')}
+                    onClick={() => window.open('http://bezbrokera.ru/', '_blank')}
                 >
                     {button.text}
                 </button>
